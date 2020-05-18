@@ -21,6 +21,24 @@ body {
     border-bottom: 0.05rem solid #023634;
     width: 500px;
     margin: 2rem; }
+  body nav .visible {
+      display: block; 
+      position: absolute;
+      background: #254646;
+      color: #e4fcf9;
+      width: 100%;
+      top: 4rem;
+      left: 0;
+      padding: 1rem;
+    }
+  body nav ul.visible{
+      display: flex;
+      align-items: center;
+      margin: auto;
+    }
+  body nav ul.visible li{
+      margin-left: 0.2rem;
+    }
 
 nav {
   background: #e4fcf9;
@@ -38,6 +56,17 @@ nav {
   nav .fa {
     font-size: 3rem;
     width: 100px; }
+  nav #hamburger {
+    display: none;
+    font-size: 2rem;
+    width: 100px; }
+  nav #hamburger.overlay {
+    width: 30px;
+    background: rgba(124, 149, 155, 0.5);
+    border-radius: 5px;
+    margin-right: 4rem;
+    transition: all 50ms linear;
+   }
   nav ul {
     display: flex;
     justify-content: space-between;
@@ -184,13 +213,17 @@ footer {
     font-size: 4rem;
     width: 100px; }
 
+
 @media screen and (max-width: 480px) {
   body nav {
-    justify-content: center; }
+    padding: 0.5rem; }
     body nav ul {
       display: none; }
+    body nav #hamburger {
+      display: inline-block; }
   body header {
-    height: 70vh; }
+    height: 70vh;
+    margin-top: 6rem; }
     body header h1, body header h2 {
       font-size: 1.7rem; }
     body header .btn-container {
